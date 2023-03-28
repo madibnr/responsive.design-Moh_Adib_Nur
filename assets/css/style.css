@@ -11,16 +11,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323945;
-    --text-color: #fff;
-    --main-color:#0ef;
-}
+
 
 img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    width: 380px;
+    height: 290px;
 }
 
 html {
@@ -28,21 +25,29 @@ html {
     overflow-x: hidden;
 }
 
+
+section {
+    min-height: 10vh;
+    padding: 5rem 9% 2rem;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323945;
+    --text-color: #fff;
+    --main-color:#0ef;
+}
+
 body {
     background: var(--bg-color);
     color: var(--text-color);
 }
-
-section {
-    min-height: 15vh;
-    padding: 10rem 9% 2rem;
-}
-
 .judul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .header {
     position: fixed;
@@ -63,18 +68,6 @@ section {
     font-weight: 600;
     cursor: default;
     justify-content: center;
-}
-
-.navbar a {
-    font-size: 1rem;
-    color: var(--text-color);
-    margin-left: 4rem;
-    transition: .3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: var(--main-color);
 }
 
 .favanime {
@@ -99,38 +92,10 @@ section {
     display: flex;
 }
 
-.favanime-box {
-    width: 100%;
-}
-
-.favanime-box .favanime-layer {
-    width: 540px;
-    height: 360px;
-}
-
-.favanime-layer h4 {
-    font-size: 1.5rem;
-    margin-top: 0vh;
-}
-
-.favanime-layer p {
-    font-size: 1rem;
-    margin: .3rem 0 1rem;
-}
-
-.card{
-    width: 450px;
-    height: 380px;
-    border-style: solid;
-    border-color: var(--bg-color);
-    border-radius: 14px;
-    background: var(--second-bg-color-bg-color);
-}
-
 .baris1{
     align-items: center;
     text-align: center;
-    display: grid;
+    display: inline-flex;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
 }
@@ -162,19 +127,8 @@ section {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        position: unset;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 3rem;
-        background: var(--second-bg-color);
-    }
     .favanime h2 {
         margin-bottom: 3rem;
-    }
-    .baris1 {
-        grid-template-columns: repeat(1, 1fr);
     }
     .header {
         list-style: disc;
